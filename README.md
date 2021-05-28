@@ -1,0 +1,2 @@
+# R5T.T0027
+Startup types library.
