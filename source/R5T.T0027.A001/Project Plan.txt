@@ -1,0 +1,5 @@
+R5T.T0027.A001 - Aggregation for basic services:
+	* Path-related operators.
+	* Executable directory path.
+	* AppSettings file path.
+	* Secrets file path.

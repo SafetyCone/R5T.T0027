@@ -1,12 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.Langobard.Extensions\source\R5T.Langobard.Extensions\R5T.Langobard.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Ostrogothia.Rivet\source\R5T.Ostrogothia.Rivet\R5T.Ostrogothia.Rivet.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Plymouth\source\R5T.Plymouth.ProgramAsAService\R5T.Plymouth.ProgramAsAService.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0020\source\R5T.T0020\R5T.T0020.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T001\R5T.T0027.T001.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T002\R5T.T0027.T002.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T003\R5T.T0027.T003.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T004\R5T.T0027.T004.csproj" />
     <ProjectReference Include="..\R5T.T0027\R5T.T0027.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

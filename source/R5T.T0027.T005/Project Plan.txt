@@ -1,0 +1,1 @@
+R5T.T0027.T005 - Simple zero service dependencies configuration configuration startup including only the default appsettings.json file to configuration.

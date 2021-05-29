@@ -1,0 +1,17 @@
+R5T.T0027.T002 - Logged startup base.
+
+NOTE: These classes must be constructed from a service provider for which logging has been configured, meaning it is not suitable for the initial stage of a startup process, or must be used from a startup process for which a startup-providing service provider has been configured with logging.
+
+
+# LoggedStartupBase #
+
+This startup class is equipped with a logger. However, it performs no logging itself.
+
+See the note above about initial startup stage suitability.
+
+
+# LoggingStartupBase #
+
+This startup class is equipped with a logger and itself logs some basic informational messages.
+
+See the note above about initial startup stage suitability.

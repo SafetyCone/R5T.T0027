@@ -2,3 +2,39 @@ R5T.T0027.Construction - A construction console-app for the library R5T.T0027.
 
 Goals
 
+
+Project Descriptions
+
+R5T.T0027.Configuration.DefaultAppSettings - Intersection of configuration and the default appsettings file.
+
+
+Startup
+
+R5T.T0027.T001 - Zero service-dependencies startup base.
+R5T.T0027.T002 - Logged and logging startup base.
+R5T.T0027.T003 - Add appsettings.json file in a service-less way.
+R5T.T0027.T004 - Add basic service functionality.
+	* Path-related operators.
+	* Executable directory path.
+	* AppSettings file path.
+	* Secrets file path.
+
+
+
+Configuration Startup
+
+
+
+Configuration Configuration Startup
+
+R5T.T0027.T005 - Simple zero service dependencies configuration configuration startup including only the default appsettings.json file.
+
+
+Aggregations:
+
+
+R5T.T0027.A001 - Aggregation for:
+	* Path-related operators.
+	* Executable directory path.
+	* AppSettings file path.
+	* Secrets file path.

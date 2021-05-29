@@ -1,0 +1,5 @@
+R5T.T0027.T004 - Add basic service functionality:
+	* Path-related operators.
+	* Executable directory path.
+	* AppSettings file path.
+	* Secrets file path.

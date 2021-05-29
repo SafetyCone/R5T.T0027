@@ -1,0 +1,7 @@
+R5T.T0027.T001 - Zero service-dependencies startup base.
+
+Contains a startup class that explicitly communicates that its constructor, and the constructors of any derived classes, should require no services.
+
+This means the startup class has zero service dependencies.
+
+This is as opposed to a startup class that might require an ILogger, or other service when created (from a service provider).
