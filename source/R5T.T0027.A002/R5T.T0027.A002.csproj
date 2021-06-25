@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.D0062\source\R5T.D0062.Chamavia\R5T.D0062.Chamavia.csproj" />
+    <ProjectReference Include="..\..\..\R5T.D0062\source\R5T.D0062.Default\R5T.D0062.Default.csproj" />
+    <ProjectReference Include="..\..\..\R5T.D0065\source\R5T.D0065.Standard\R5T.D0065.Standard.csproj" />
+    <ProjectReference Include="..\..\..\R5T.D0070\source\R5T.D0070.Standard\R5T.D0070.Standard.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Lombardy\source\R5T.Lombardy\R5T.Lombardy.csproj" />
+  </ItemGroup>
+
+</Project>

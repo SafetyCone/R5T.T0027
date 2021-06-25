@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\R5T.T0027.Configuration.DefaultAppSettings\R5T.T0027.Configuration.DefaultAppSettings.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T001\R5T.T0027.T001.csproj" />
+  </ItemGroup>
+
 </Project>

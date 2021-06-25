@@ -1,0 +1,8 @@
+R5T.T0027.A004 - Aggregation for:
+
+* Machine-location aware secrets file paths.
+* A003 services:
+	* Environment variables.
+	* Path-related operators.
+	* Executable directory path.
+	* AppSettings file path.

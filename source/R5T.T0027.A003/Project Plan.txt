@@ -1,0 +1,6 @@
+R5T.T0027.A003 - Aggregation for basic services:
+
+* Environment variables.
+* Path-related operators.
+* Executable directory path.
+* AppSettings file path.

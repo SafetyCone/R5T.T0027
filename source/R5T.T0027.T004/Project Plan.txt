@@ -1,4 +1,5 @@
 R5T.T0027.T004 - Add basic service functionality:
+	* Environment variables.
 	* Path-related operators.
 	* Executable directory path.
 	* AppSettings file path.

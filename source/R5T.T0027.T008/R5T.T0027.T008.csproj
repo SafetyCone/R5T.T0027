@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.Langobard\source\R5T.Langobard.Default\R5T.Langobard.Default.csproj" />
+    <ProjectReference Include="..\R5T.T0027.A001\R5T.T0027.A001.csproj" />
+    <ProjectReference Include="..\R5T.T0027.Configuration.DefaultAppSettings\R5T.T0027.Configuration.DefaultAppSettings.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T002\R5T.T0027.T002.csproj" />
+  </ItemGroup>
+
+</Project>

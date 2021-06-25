@@ -1,0 +1,6 @@
+R5T.T0027.T006 - Standard ConfigurationConfigurationStartup functionality including:
+	* Logging startup service dependency.
+	* IConfiguration:
+		* Default appsettings.json file via service-less means.
+	* IServiceProvider
+		* IAppSettingsFilePathProvider and IEnvironmentNameSpecificAppSettingsFilePathProvider services.

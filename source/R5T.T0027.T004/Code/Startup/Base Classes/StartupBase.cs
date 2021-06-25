@@ -20,20 +20,20 @@ namespace R5T.T0027.T004
         {
         }
 
-        protected override async Task ConfigureServices_HasLogging(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
+        protected override async Task ConfigureServices_Internal(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
         {
             var organizationProviderAction = await this.GetOrganizationProviderAction(services, configurationAction, startupServicesProvider);
 
-            var basicServicesAggregation = services.AddBasicServices(
+            var a001ServicesAggregation = services.AddA001Services(
                 organizationProviderAction);
 
-            await this.ConfigureServices_WithBasicServices(services, configurationAction, startupServicesProvider,
-                basicServicesAggregation);
+            await this.ConfigureServicesWithProvidedServices(services, configurationAction, startupServicesProvider,
+                a001ServicesAggregation);
         }
 
         protected abstract Task<IServiceAction<IOrganizationProvider>> GetOrganizationProviderAction(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider);
 
-        protected abstract Task ConfigureServices_WithBasicServices(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider,
-            BasicServicesAggregation01 basicServicesAggregation);
+        protected abstract Task ConfigureServicesWithProvidedServices(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider,
+            IServicesAggregation01 a001ServicesAggregation);
     }
 }

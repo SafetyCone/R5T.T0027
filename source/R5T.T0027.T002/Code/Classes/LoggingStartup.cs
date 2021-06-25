@@ -20,7 +20,7 @@ namespace R5T.T0027.T002
         /// <summary>
         /// Base method does nothing.
         /// </summary>
-        protected override Task ConfigureConfiguration_HasLogging(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider)
+        protected override Task ConfigureConfiguration_Internal(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider)
         {
             // Do nothing.
 
@@ -30,7 +30,7 @@ namespace R5T.T0027.T002
         /// <summary>
         /// Base method does nothing.
         /// </summary>
-        protected override Task ConfigureServices_HasLogging(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
+        protected override Task ConfigureServices_Internal(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
         {
             // Do nothing.
 

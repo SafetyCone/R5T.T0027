@@ -21,7 +21,7 @@ namespace R5T.T0027.Construction.Operations
 
         public Task Run()
         {
-            var key = "ConfigurationName";
+            var key = "EnvironmentName";
             var value = this.Configuration.GetRequiredValue(key);
 
             Console.WriteLine($"Configuration - \"{key}\":\"{value}\"");

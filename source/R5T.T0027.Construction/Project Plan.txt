@@ -6,18 +6,75 @@ Goals
 Project Descriptions
 
 R5T.T0027.Configuration.DefaultAppSettings - Intersection of configuration and the default appsettings file.
+R5T.T0027.Configuration.SecretsFilePaths - Add secrets directory file paths.
 
 
 Startup
 
 R5T.T0027.T001 - Zero service-dependencies startup base.
+
 R5T.T0027.T002 - Logged and logging startup base.
+
 R5T.T0027.T003 - Add appsettings.json file in a service-less way.
+
 R5T.T0027.T004 - Add basic service functionality.
-	* Path-related operators.
-	* Executable directory path.
-	* AppSettings file path.
-	* Secrets file path.
+
+* A001 Services:
+	* Secrets directory file path.
+	* A003 services:
+		* Environment variables.
+		* Path-related operators.
+		* Executable directory path.
+		* AppSettings file path.
+
+R5T.T0027.T007 - Startup with:
+
+* A004 services:
+	* Machine-location aware secrets file paths.
+	* A003 services:
+		* Environment variables.
+		* Path-related operators.
+		* Executable directory path.
+		* AppSettings file path.
+
+
+R5T.T0027.T008 - T006 ConfigurationConfigurationStartup rebranded as just Startup.
+
+=> Meant to be used as the first stage of a multi-stage startup process.
+
+Requires an ILogger startup provider service dependency.
+
+* Logged.
+* Requires no services in configuring IConfiguration.
+* Services available during configuration of the next stage:
+	* AddDefaultAndEnvironmentNameSpecificAppSettingsFilePaths operation.
+	* Default AppSettings file path services.
+	* Environment-specific AppSettings file path services.
+
+
+
+R5T.T0027.T008 - StartupBase usuable in local-only projects.
+
+* Logged
+* Requires no services in configuring IConfiguration.
+* Configuration:
+	* Default appsettings.json file added servicelessly.
+* Required services:
+	* Organization provider.
+* Provided services:
+	* Required services
+	* A001 Services:
+		* Secrets directory file path.
+		* A003 services:
+			* Environment variables.
+			* Path-related operators.
+			* Executable directory path.
+			* AppSettings file path.
+
+Note, this is a more refined version of R5T.T0027.T004.
+
+
+R5T.T0027.T009 - T008-based Startup useful as a configuration-startup in local-only projects.
 
 
 
@@ -29,12 +86,44 @@ Configuration Configuration Startup
 
 R5T.T0027.T005 - Simple zero service dependencies configuration configuration startup including only the default appsettings.json file.
 
+R5T.T0027.T006 - Standard ConfigurationConfigurationStartup functionality including:
+
+* Logging startup service dependency.
+* IConfiguration:
+	* Default appsettings.json file via service-less means.
+* IServiceProvider
+	* IAppSettingsFilePathProvider and IEnvironmentNameSpecificAppSettingsFilePathProvider services.
+
 
 Aggregations:
 
 
 R5T.T0027.A001 - Aggregation for:
+
+* Secrets file paths.
+* A003 services:
+	* Environment variables.
 	* Path-related operators.
 	* Executable directory path.
 	* AppSettings file path.
-	* Secrets file path.
+
+R5T.T0027.A002 - Aggregation for:
+
+* IAppSettingsFilePathProvider (R5T.D0070)
+* IConfiguration-based IEnvironmentNameSpecificAppSettingsFilePathProvider using a development-valued IDefaultEnvironmentNameProvider (R5T.D0070)
+
+R5T.T0027.A003 - Aggregation for:
+
+* Environment variables.
+* Path-related operators.
+* Executable directory path.
+* AppSettings file path.
+
+R5T.T0027.A004 - Aggregation for:
+
+* Machine-location aware secrets file paths.
+* A003 services:
+	* Environment variables.
+	* Path-related operators.
+	* Executable directory path.
+	* AppSettings file path.

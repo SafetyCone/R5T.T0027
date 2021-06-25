@@ -5,9 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 using R5T.Dacia;
 using R5T.Suebia;
+using R5T.Suebia.Quadia;
 
 using R5T.D0065;
 using R5T.D0070;
+using R5T.D0073;
 
 using R5T.T0027.Construction.Operations;
 
@@ -70,6 +72,68 @@ namespace R5T.T0027.Construction
                 appSettingsFilePathProviderAction,
                 executableDirectoryPathProviderAction,
                 secretsDirectoryPathProviderAction));
+
+            return serviceAction;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="ExerciseAppSettingsServices"/> operation as a <see cref="ServiceLifetime.Singleton"/>.
+        /// </summary>
+        public static IServiceCollection AddExerciseAppSettingsServices(this IServiceCollection services,
+            IServiceAction<IAppSettingsFilePathProvider> appSettingsFilePathProviderAction,
+            IServiceAction<IEnvironmentNameSpecificAppSettingsFilePathProvider> environmentNameSpecificAppSettingsFilePathProviderAction)
+        {
+            services.AddSingleton<ExerciseAppSettingsServices>()
+                .Run(appSettingsFilePathProviderAction)
+                .Run(environmentNameSpecificAppSettingsFilePathProviderAction)
+                ;
+
+            return services;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="ExerciseAppSettingsServices"/> operation as a <see cref="ServiceLifetime.Singleton"/>.
+        /// </summary>
+        public static IServiceAction<ExerciseAppSettingsServices> AddExerciseAppSettingsServicesAction(this IServiceCollection services,
+            IServiceAction<IAppSettingsFilePathProvider> appSettingsFilePathProviderAction,
+            IServiceAction<IEnvironmentNameSpecificAppSettingsFilePathProvider> environmentNameSpecificAppSettingsFilePathProviderAction)
+        {
+            var serviceAction = ServiceAction.New<ExerciseAppSettingsServices>(() => services.AddExerciseAppSettingsServices(
+                appSettingsFilePathProviderAction,
+                environmentNameSpecificAppSettingsFilePathProviderAction));
+
+            return serviceAction;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="ExerciseMachineLocationAwareSecretsDirectory"/> operation as a <see cref="ServiceLifetime.Singleton"/>.
+        /// </summary>
+        public static IServiceCollection AddExerciseMachineLocationAwareSecretsDirectory(this IServiceCollection services,
+            IServiceAction<IMachineLocationProvider> machineLocationProviderAction,
+            IServiceAction<IOrganizationDataSecretsDirectoryPathProvider> organizationDataSecretsDirectoryPathProviderAction,
+            IServiceAction<ISecretsDirectoryFilePathProvider> secretsDirectoryFilePathProviderAction)
+        {
+            services.AddSingleton<ExerciseMachineLocationAwareSecretsDirectory>()
+                .Run(machineLocationProviderAction)
+                .Run(organizationDataSecretsDirectoryPathProviderAction)
+                .Run(secretsDirectoryFilePathProviderAction)
+                ;
+
+            return services;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="ExerciseMachineLocationAwareSecretsDirectory"/> operation as a <see cref="ServiceLifetime.Singleton"/>.
+        /// </summary>
+        public static IServiceAction<ExerciseMachineLocationAwareSecretsDirectory> AddExerciseMachineLocationAwareSecretsDirectoryAction(this IServiceCollection services,
+            IServiceAction<IMachineLocationProvider> machineLocationProviderAction,
+            IServiceAction<IOrganizationDataSecretsDirectoryPathProvider> organizationDataSecretsDirectoryPathProviderAction,
+            IServiceAction<ISecretsDirectoryFilePathProvider> secretsDirectoryFilePathProviderAction)
+        {
+            var serviceAction = ServiceAction.New<ExerciseMachineLocationAwareSecretsDirectory>(() => services.AddExerciseMachineLocationAwareSecretsDirectory(
+                machineLocationProviderAction,
+                organizationDataSecretsDirectoryPathProviderAction,
+                secretsDirectoryFilePathProviderAction));
 
             return serviceAction;
         }

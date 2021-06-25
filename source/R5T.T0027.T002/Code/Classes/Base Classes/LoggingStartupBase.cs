@@ -10,7 +10,7 @@ using R5T.Dacia;
 
 namespace R5T.T0027.T002
 {
-    public abstract class LoggingStartupBase : LoggedStartup
+    public abstract class LoggingStartupBase : LoggedStartupBase
     {
         protected LoggingStartupBase(ILogger logger)
             : base(logger)
@@ -23,12 +23,12 @@ namespace R5T.T0027.T002
 
             this.Logger.LogDebug("Starting configuration of configuration builder...");
 
-            await this.ConfigureConfiguration_HasLogging(configurationBuilder, startupServicesProvider);
+            await this.ConfigureConfiguration_Internal(configurationBuilder, startupServicesProvider);
 
             this.Logger.LogDebug("Finished configuration of configuration builder.");
         }
 
-        protected abstract Task ConfigureConfiguration_HasLogging(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider);
+        protected abstract Task ConfigureConfiguration_Internal(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider);
 
         public override async Task ConfigureServices(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
         {
@@ -36,11 +36,11 @@ namespace R5T.T0027.T002
 
             this.Logger.LogDebug("Starting configuration of service collection...");
 
-            await this.ConfigureServices_HasLogging(services, configurationAction, startupServicesProvider);
+            await this.ConfigureServices_Internal(services, configurationAction, startupServicesProvider);
 
             this.Logger.LogDebug("Finished configuration of service collection.");
         }
 
-        protected abstract Task ConfigureServices_HasLogging(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider);
+        protected abstract Task ConfigureServices_Internal(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider);
     }
 }

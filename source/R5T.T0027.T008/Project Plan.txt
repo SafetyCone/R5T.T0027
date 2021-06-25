@@ -1,0 +1,17 @@
+R5T.T0027.T008 - StartupBase usuable in local-only projects.
+
+* Logged
+* Requires no services in configuring IConfiguration.
+* Configuration:
+	* Default appsettings.json file added servicelessly.
+* Required services:
+	* Organization provider.
+* Provided services:
+	* Required services
+	* A001 Services:
+		* Secrets directory file path.
+		* A003 services:
+			* Environment variables.
+			* Path-related operators.
+			* Executable directory path.
+			* AppSettings file path.

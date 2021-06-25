@@ -11,8 +11,6 @@ using R5T.Ostrogothia.Rivet;
 
 using R5T.T0027.A001;
 
-using R5T.T0027.Construction.Operations;
-
 
 namespace R5T.T0027.Construction
 {
@@ -23,21 +21,21 @@ namespace R5T.T0027.Construction
         {
         }
 
-        protected override Task ConfigureConfiguration_HasLogging(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider)
+        protected override Task ConfigureConfiguration_Internal(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider)
         {
             // Do nothing.
 
             return Task.CompletedTask;
         }
 
-        protected override Task ConfigureServices_WithBasicServices(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider,
-            BasicServicesAggregation01 basicServicesAggregation)
+        protected override Task ConfigureServicesWithProvidedServices(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider,
+            IServicesAggregation01 basicServicesAggregation)
         {
             // Operations.
             var exerciseBasicServicesAction = services.AddExerciseBasicServicesAction(
-                basicServicesAggregation.AppSettingsFilePathServices.AppSettingsFilePathProvider,
-                basicServicesAggregation.ExecutableDirectoryPathServices.ExecutableDirectoryPathProviderAction,
-                basicServicesAggregation.SecretsDirectoryFilePathServices.SecretsDirectoryPathProviderAction);
+                basicServicesAggregation.AppSettingsFilePathProvider,
+                basicServicesAggregation.ExecutableDirectoryPathProviderAction,
+                basicServicesAggregation.SecretsDirectoryPathProviderAction);
 
             services
                 .Run(exerciseBasicServicesAction)

@@ -2,21 +2,15 @@
 
 using Microsoft.Extensions.Logging;
 
-using StartupBase = R5T.Plymouth.Startup.Startup;
-
 
 namespace R5T.T0027.T002
 {
-    public class LoggedStartup : StartupBase
+    public class LoggedStartup : LoggedStartupBase
     {
-        protected ILogger Logger { get; }
-
-
         public LoggedStartup(
-            ILogger logger)
-            : base()
+            ILogger<LoggedStartup> logger)
+            : base(logger)
         {
-            this.Logger = logger;
         }
     }
 }

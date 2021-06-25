@@ -1,0 +1,4 @@
+R5T.T0027.A002 - Aggregation for:
+
+* IAppSettingsFilePathProvider (R5T.D0070)
+* IConfiguration-based IEnvironmentNameSpecificAppSettingsFilePathProvider using a development-valued IDefaultEnvironmentNameProvider (R5T.D0070)

@@ -5,7 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\R5T.Langobard.Extensions\source\R5T.Langobard.Extensions\R5T.Langobard.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Langobard\source\R5T.Langobard.Default\R5T.Langobard.Default.csproj" />
     <ProjectReference Include="..\..\..\R5T.Ostrogothia.Rivet\source\R5T.Ostrogothia.Rivet\R5T.Ostrogothia.Rivet.csproj" />
     <ProjectReference Include="..\..\..\R5T.Plymouth\source\R5T.Plymouth.ProgramAsAService\R5T.Plymouth.ProgramAsAService.csproj" />
     <ProjectReference Include="..\..\..\R5T.T0020\source\R5T.T0020\R5T.T0020.csproj" />
@@ -13,6 +13,8 @@
     <ProjectReference Include="..\R5T.T0027.T002\R5T.T0027.T002.csproj" />
     <ProjectReference Include="..\R5T.T0027.T003\R5T.T0027.T003.csproj" />
     <ProjectReference Include="..\R5T.T0027.T004\R5T.T0027.T004.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T006\R5T.T0027.T006.csproj" />
+    <ProjectReference Include="..\R5T.T0027.T007\R5T.T0027.T007.csproj" />
     <ProjectReference Include="..\R5T.T0027\R5T.T0027.csproj" />
   </ItemGroup>
 
