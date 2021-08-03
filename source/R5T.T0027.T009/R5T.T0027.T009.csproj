@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.Ostrogothia.Rivet\source\R5T.Ostrogothia.Rivet\R5T.Ostrogothia.Rivet.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Plymouth\source\R5T.Plymouth.ServiceProvider\R5T.Plymouth.ServiceProvider.csproj" />
     <ProjectReference Include="..\R5T.T0027.Configuration.SecretsFilePaths\R5T.T0027.Configuration.SecretsFilePaths.csproj" />
     <ProjectReference Include="..\R5T.T0027.T008\R5T.T0027.T008.csproj" />
   </ItemGroup>
