@@ -18,13 +18,13 @@ namespace R5T.T0027.A001
         {
             var a003Services = services.AddA003Services();
             
-            var secretsDirectoryFilePathProviderAction = services.AddSecretsDirectoryFilePathProviderServices(
+            var secretsDirectoryFilePathProviderServiceActions = services.AddSecretsDirectoryFilePathProviderServices(
                 organizationProviderAction,
                 a003Services.StringlyTypedPathOperatorAction);
 
             return new ServicesAggregation01()
                 .FillFrom(a003Services)
-                .FillFrom(secretsDirectoryFilePathProviderAction)
+                .FillFrom(secretsDirectoryFilePathProviderServiceActions)
                 ;
         }
     }

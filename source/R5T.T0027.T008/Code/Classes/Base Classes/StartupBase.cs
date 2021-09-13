@@ -21,6 +21,10 @@ namespace R5T.T0027.T008
         {
         }
 
+        /// <summary>
+        /// When overridden, startup base methods should always be called as the first line of the override method.
+        /// This base mthod adds the default JSON appsettings file and logs.
+        /// </summary>
         public override async Task ConfigureConfiguration(IConfigurationBuilder configurationBuilder, IServiceProvider startupServicesProvider)
         {
             await base.ConfigureConfiguration(configurationBuilder, startupServicesProvider);
