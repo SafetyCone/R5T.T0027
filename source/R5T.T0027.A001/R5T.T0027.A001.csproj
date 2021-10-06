@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\R5T.Ostrogothia\source\R5T.Ostrogothia.Base\R5T.Ostrogothia.Base.csproj" />
     <ProjectReference Include="..\..\..\R5T.Suebia\source\R5T.Suebia.Standard\R5T.Suebia.Standard.csproj" />
     <ProjectReference Include="..\R5T.T0027.A003\R5T.T0027.A003.csproj" />
   </ItemGroup>
