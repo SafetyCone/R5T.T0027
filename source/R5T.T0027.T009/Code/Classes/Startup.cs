@@ -41,7 +41,7 @@ namespace R5T.T0027.T009
 
         protected override Task<IRequiredServices> GetRequiredServices(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
         {
-            var organizationProviderAction = services.AddOrganizationProviderAction();
+            var organizationProviderAction = services.AddOrganizationProviderAction_Old();
 
             var requiredServices = new RequiredServices
             {
