@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using R5T.Dacia;
+using R5T.Magyar.Extensions;
 using R5T.Ostrogothia;
 using R5T.Suebia.Default;
 using R5T.Suebia.D0073;
@@ -36,7 +37,7 @@ namespace R5T.T0027.A004
                 machineLocationProviderServices.MachineLocationProviderAction,
                 organizationDataSecretsDirectoryFilePathProviderAction.OrganizationDataSecretsDirectoryPathProviderAction);
 
-            var secretsDirectoryFilePathProviderAction = services.AddSecretsDirectoryFilePathProviderAction(
+            var secretsDirectoryFilePathProviderAction = services.AddSecretsDirectoryFilePathProviderAction_Old(
                 secretsDirectoryPathProviderAction,
                 a003Services.StringlyTypedPathOperatorAction);
 
@@ -44,7 +45,7 @@ namespace R5T.T0027.A004
                 .FillFrom(a003Services)
                 .FillFrom(organizationDataSecretsDirectoryFilePathProviderAction)
                 .FillFrom(machineLocationProviderServices)
-                .As<ServicesAggregation01, IServicesAggregation01Increment>(aggregation =>
+                .ModifyAs<ServicesAggregation01, IServicesAggregation01Increment>(aggregation =>
                 {
                     aggregation.SecretsDirectoryFilePathProviderAction = secretsDirectoryFilePathProviderAction;
                     aggregation.SecretsDirectoryPathProviderAction = secretsDirectoryPathProviderAction;

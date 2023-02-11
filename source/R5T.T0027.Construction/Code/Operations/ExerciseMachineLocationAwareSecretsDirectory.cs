@@ -11,7 +11,7 @@ using R5T.D0073;
 
 namespace R5T.T0027.Construction.Operations
 {
-    public class ExerciseMachineLocationAwareSecretsDirectory : IOperation
+    public class ExerciseMachineLocationAwareSecretsDirectory : IActionOperation
     {
         private IMachineLocationProvider MachineLocationProvider { get; }
         private IOrganizationDataSecretsDirectoryPathProvider OrganizationDataSecretsDirectoryPathProvider { get; }

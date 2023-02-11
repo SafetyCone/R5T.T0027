@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 using Microsoft.Extensions.Configuration;
 
-using R5T.Magyar;
+using R5T.Magyar.Extensions;
 
 using R5T.T0027.Configuration.T001;
 

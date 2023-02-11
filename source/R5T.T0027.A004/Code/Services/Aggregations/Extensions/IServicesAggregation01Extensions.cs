@@ -1,8 +1,9 @@
 ﻿using System;
 
-using R5T.Suebia.Standard;
+using R5T.Magyar.Extensions;
 
 using R5T.D0073.Standard;
+using R5T.Suebia.Standard;
 
 using R5T.T0027.A004;
 
@@ -19,7 +20,7 @@ namespace System
             (aggregation as IOrganizationDataSecretsDirectoryPathAggregation01).FillFrom(other);
             (aggregation as IMachineLocationProviderAggregation01).FillFrom(other);
 
-            aggregation.As<IServicesAggregation01, IServicesAggregation01Increment>(increment =>
+            aggregation.ModifyAs<IServicesAggregation01, IServicesAggregation01Increment>(increment =>
             {
                 increment.SecretsDirectoryFilePathProviderAction = other.SecretsDirectoryFilePathProviderAction;
                 increment.SecretsDirectoryPathProviderAction = other.SecretsDirectoryPathProviderAction;

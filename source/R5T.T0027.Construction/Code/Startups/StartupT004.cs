@@ -46,7 +46,7 @@ namespace R5T.T0027.Construction
 
         protected override Task<IServiceAction<IOrganizationProvider>> GetOrganizationProviderAction(IServiceCollection services, IServiceAction<IConfiguration> configurationAction, IServiceProvider startupServicesProvider)
         {
-            var organizationProviderAction = services.AddOrganizationProviderAction();
+            var organizationProviderAction = services.AddOrganizationProviderAction_Old();
 
             return Task.FromResult(organizationProviderAction);
         }
